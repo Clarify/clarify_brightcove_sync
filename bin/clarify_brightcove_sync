@@ -1,0 +1,45 @@
+#! /usr/bin/env python3
+import os
+import sys
+import inspect
+import argparse
+
+# realpath() will make your script run, even if you symlink it :)
+# uses inspect because __file__ fails if script is called in different ways on Windows
+cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0]))
+sys.path += [os.path.join(cmd_folder,'..')]
+
+from clarify_brightcove_sync.brightcove_api_client import BrightcoveAPIClient
+from clarify_brightcove_sync.clarify_brightcove_bridge import ClarifyBrightcoveBridge
+from clarify_python import clarify
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Sync a Brightcove library to Clarify.')
+    parser.add_argument('--dry_run', action='store_true',
+                        help='Show what would be done but don\'t actually modify bundles. Default false (bundles will be modified)')
+    parser.add_argument('--keep_deleted_bundles', action='store_true',
+                        help='Don\'t try to delete bundles for missing videos. Default false (bundles may be deleted)')
+
+    def confirm_delete(name, vid):
+        user_input = input('Delete Clarify bundle "{0}" for missing video id {1}? [y/N] '.format(name, vid))
+        return user_input == 'y' or user_input == 'Y'
+
+    pargs = parser.parse_args(sys.argv[1:])
+    delete_bundles = not pargs.keep_deleted_bundles
+    dry_run = pargs.dry_run
+
+    CLARIFY_API_KEY = os.environ.get('CLARIFY_API_KEY')
+    clarify_client = clarify.Client(CLARIFY_API_KEY)
+
+    bc_creds_file = os.environ.get('BRIGHTCOVE_API_CREDENTIALS')
+    if not bc_creds_file:
+       bc_creds_file = 'brightcove_oauth.json'
+
+    bc_client = BrightcoveAPIClient(bc_creds_file)
+
+    bridge = ClarifyBrightcoveBridge(clarify_client, bc_client)
+
+    bridge.sync_bundles(delete_bundles=delete_bundles, confirm_delete_fun=confirm_delete, dry_run=dry_run)
+    bridge.log_sync_stats()

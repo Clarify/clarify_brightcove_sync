@@ -1,0 +1,23 @@
+{
+  "bundle_id": "1e66255883c24319a7aede9d3e42d8d9",
+  "version": 1,
+  "created": "2015-09-04T21:27:29.744Z",
+  "updated": "2015-09-04T21:27:29.744Z",
+  "data": {
+    "name": "Sample Video 2",
+    "updated_at": "2015-02-16T21:47:28.909Z",
+    "created_at": "2015-02-16T21:47:28.433Z",
+    "tags": ["sample"],
+    "description": "The short description can be used to give more information about your video and will appear in many standard Brightcove player templates.",
+    "long_description": ""
+  },
+  "_class": "Metadata",
+  "_links": {
+    "self": {
+      "href": "/v1/bundles/1e66255883c24319a7aede9d3e42d8d9/metadata"
+    },
+    "parent": {
+      "href": "/v1/bundles/1e66255883c24319a7aede9d3e42d8d9"
+    }
+  }
+}

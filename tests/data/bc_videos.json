@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Sample Video 2",
+    "custom_fields": {},
+    "economics": "AD_SUPPORTED",
+    "link": null,
+    "description": "The short description can be used to give more information about your video and will appear in many standard Brightcove player templates.",
+    "long_description": null,
+    "schedule": null,
+    "account_id": "4053905847001",
+    "complete": true,
+    "folder_id": null,
+    "id": "4059687007001",
+    "original_filename": "Bird_CommonRedpoll_iStock_000006369683HD720.mov",
+    "state": "ACTIVE",
+    "updated_at": "2015-02-16T21:47:28.909Z",
+    "digital_master_id": null,
+    "reference_id": null,
+    "sharing": null,
+    "created_at": "2015-02-16T21:47:28.433Z",
+    "text_tracks": [],
+    "cue_points": [],
+    "duration": 29960,
+    "geo": null,
+    "tags": [
+      "sample"
+    ],
+    "images": {
+      "poster": {
+        "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4053905847001&videoId=4059687007001",
+        "sources": [
+          {
+            "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4053905847001&videoId=4059687007001",
+            "height": null,
+            "width": null
+          },
+          {
+            "src": "https://brightcove.hs.llnwd.net/e1/pd/96980657001/96980657001_207574837001_commonRedpoll-still.jpg?pubId=4053905847001&videoId=4059687007001",
+            "height": null,
+            "width": null
+          }
+        ],
+        "asset_id": "207574837001",
+        "remote": false
+      },
+      "thumbnail": {
+        "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_180424037001_commonRedpoll-thumbnail.jpg?pubId=4053905847001&videoId=4059687007001",
+        "sources": [
+          {
+            "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_180424037001_commonRedpoll-thumbnail.jpg?pubId=4053905847001&videoId=4059687007001",
+            "height": null,
+            "width": null
+          },
+          {
+            "src": "https://brightcove.hs.llnwd.net/e1/pd/96980657001/96980657001_180424037001_commonRedpoll-thumbnail.jpg?pubId=4053905847001&videoId=4059687007001",
+            "height": null,
+            "width": null
+          }
+        ],
+        "asset_id": "180424037001",
+        "remote": false
+      }
+    }
+  },
+  {
+    "name": "Sample Video 1",
+    "custom_fields": {},
+    "economics": "AD_SUPPORTED",
+    "link": null,
+    "description": "The short description can be used to give more information about your video and will appear in many standard Brightcove player templates.",
+    "long_description": null,
+    "schedule": null,
+    "account_id": "4053905847001",
+    "complete": true,
+    "folder_id": null,
+    "id": "4059687008001",
+    "original_filename": "Bird_Titmouse_iStock_000005422648HD1080.mov",
+    "state": "ACTIVE",
+    "updated_at": "2016-01-22T22:51:50.720Z",
+    "digital_master_id": null,
+    "reference_id": null,
+    "sharing": null,
+    "created_at": "2015-02-16T21:47:28.438Z",
+    "text_tracks": [],
+    "cue_points": [],
+    "duration": 8242,
+    "geo": null,
+    "tags": [
+      "sample"
+    ],
+    "images": {
+      "poster": {
+        "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207566970001_titmouse-still.jpg?pubId=4053905847001&videoId=4059687008001",
+        "sources": [
+          {
+            "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207566970001_titmouse-still.jpg?pubId=4053905847001&videoId=4059687008001",
+            "height": null,
+            "width": null
+          },
+          {
+            "src": "https://brightcove.hs.llnwd.net/e1/pd/96980657001/96980657001_207566970001_titmouse-still.jpg?pubId=4053905847001&videoId=4059687008001",
+            "height": null,
+            "width": null
+          }
+        ],
+        "asset_id": "207566970001",
+        "remote": false
+      },
+      "thumbnail": {
+        "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207566934001_titmouse-thumbnail.jpg?pubId=4053905847001&videoId=4059687008001",
+        "sources": [
+          {
+            "src": "http://brightcove.vo.llnwd.net/e1/pd/96980657001/96980657001_207566934001_titmouse-thumbnail.jpg?pubId=4053905847001&videoId=4059687008001",
+            "height": null,
+            "width": null
+          },
+          {
+            "src": "https://brightcove.hs.llnwd.net/e1/pd/96980657001/96980657001_207566934001_titmouse-thumbnail.jpg?pubId=4053905847001&videoId=4059687008001",
+            "height": null,
+            "width": null
+          }
+        ],
+        "asset_id": "207566934001",
+        "remote": false
+      }
+    }
+  }
+]
