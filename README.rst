@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/Clarify/clarify_brightcove_sync.svg
+   :target: https://travis-ci.org/Clarify/clarify_brightcove_sync
+
 ===============================
 Clarify Brightcove Sync Tool
 ===============================
@@ -12,6 +15,7 @@ Running the sync tool will compare the contents of your Brightcove library and y
 
 This script does not modify content in Brightcove so does NOT require Brightcove API write access.
 
+* Requires Python 3 (yeah!)
 * If you have a very large or rapidly changing video library, see `Limitations`_ below.
 * Free software: MIT license
 
