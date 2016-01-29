@@ -103,7 +103,7 @@ If things look correct, you can run the sync for real to have Clarify bundles cr
 Video Media
 -----------
 
-The Clarify API ingests media from URLs. This sync tool looks in the Sources (renditions) of a Brightcove Video to find one with the highest resolution (up to 1080p), encoded using the H264 codec, and featuring an http/https Src URL. If no suitable video URL is found, the bundle will not be created in Clarify. Currently, the tool only supports videos that were ingested with Brightcove and does not support "remote" videos.
+The Clarify API ingests media from URLs. This sync tool looks in the Sources (renditions) of a Brightcove Video to find one with the highest resolution (up to 1080p), encoded using the H264 codec, and featuring an http/https Src URL. If no suitable video URL is found, the bundle will not be created in Clarify. See `Limitations`_ for more details.
 
 Metadata
 --------
@@ -144,6 +144,13 @@ In order to keep things simple and allow the script to work without Brightcove A
 To overcome the above limitations, the script could be improved by using the Brightcove API in write mode. Each Video could have a ``custom_field`` containing the bundle href/id of the Video's corresponding bundle in Clarify. Then the Brightcove API could be used to search for the Videos that need changing, for example videos with no bundle href/id set.
 
 The iteration/pagination issue could be resolved by refetching the video library until the video count matches the expected count.
+
+Video Media
+^^^^^^^^^^^^^
+
+The Clarify API ingests media from URLs. This sync tool looks in the Sources (renditions) of a Brightcove Video to find one with the highest resolution (up to 1080p), encoded using the H264 codec, and featuring an http/https Src URL. If no suitable video URL is found, the bundle will not be created in Clarify. Currently, the tool only supports videos that were ingested with Brightcove and does not support "remote" videos.
+
+Support for remote videos could be easily added. If the ``remote`` field in the Video Source is ``true``, the Brightcove CMS Asset API can be used to get the Rendition list, and from that the ``remote_url`` of the desired rendition. This URL can be used for the Clarify bundle.
 
 Custom Fields
 ^^^^^^^^^^^^^
