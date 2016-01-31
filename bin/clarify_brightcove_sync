@@ -6,8 +6,8 @@ import argparse
 
 # realpath() will make your script run, even if you symlink it :)
 # uses inspect because __file__ fails if script is called in different ways on Windows
-cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0]))
-sys.path += [os.path.join(cmd_folder,'..')]
+cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile(inspect.currentframe()))[0]))
+sys.path += [os.path.join(cmd_folder, '..')]
 
 from clarify_brightcove_sync.brightcove_api_client import BrightcoveAPIClient
 from clarify_brightcove_sync.clarify_brightcove_bridge import ClarifyBrightcoveBridge
@@ -18,7 +18,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Sync a Brightcove library to Clarify.')
     parser.add_argument('--dry_run', action='store_true',
-                        help='Show what would be done but don\'t actually modify bundles. Default false (bundles will be modified)')
+                        help='Show what would be done but don\'t actually modify bundles. ' +
+                        'Default false (bundles will be modified)')
     parser.add_argument('--keep_deleted_bundles', action='store_true',
                         help='Don\'t try to delete bundles for missing videos. Default false (bundles may be deleted)')
 
@@ -35,7 +36,7 @@ if __name__ == "__main__":
 
     bc_creds_file = os.environ.get('BRIGHTCOVE_API_CREDENTIALS')
     if not bc_creds_file:
-       bc_creds_file = 'brightcove_oauth.json'
+        bc_creds_file = 'brightcove_oauth.json'
 
     bc_client = BrightcoveAPIClient(bc_creds_file)
 
