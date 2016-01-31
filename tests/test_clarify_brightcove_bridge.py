@@ -1,10 +1,10 @@
 import unittest
 import httpretty
-from urllib.parse import parse_qs
 from clarify_python import clarify
 from clarify_brightcove_sync.brightcove_api_client import BrightcoveAPIClient
 from clarify_brightcove_sync.clarify_brightcove_bridge import ClarifyBrightcoveBridge
 from . import register_uris
+
 
 class TestClient(unittest.TestCase):
 

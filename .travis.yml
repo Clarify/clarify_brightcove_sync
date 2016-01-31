@@ -1,8 +1,11 @@
 language: python
 python:
-- "3.4"
-- "3.5"
-# command to install dependencies
-#install: "pip install -r requirements.txt"
-# command to run tests
-script: python setup.py test
+  - "3.4"
+  - "3.5"
+install:
+  pip install flake8
+before_script:
+  - flake8 .
+  - flake8 --ignore=E402 bin/clarify_brightcove_sync
+script:
+  python setup.py test
